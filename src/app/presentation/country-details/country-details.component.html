@@ -1,0 +1,19 @@
+<div>
+    <h2>Country Details</h2>
+    <div class="field-row">
+        <label>Name:</label>  <label> {{ countryDetail.name}}</label>
+    </div>
+    <div class="field-row">
+        <label>Capital:</label>  <label> {{ countryDetail.captial}}</label>
+    </div>
+    <div class="field-row">
+        <label>Population:</label>  <label> {{ countryDetail.population}}</label>
+    </div>
+    <div class="field-row">
+        <label>Currencies:</label>  <label *ngFor="let currency of countryDetail.currencies"> 
+            {{ currency.name + (index === countryDetail.currencies.length -1 ? '' : ',') }}</label>       
+    </div>    
+    <div class="field-row">
+        <label>Flag:</label>  <label> {{ countryDetail.flag}}</label>
+    </div>
+</div>

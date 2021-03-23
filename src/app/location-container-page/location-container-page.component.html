@@ -1,0 +1,18 @@
+<div class="flex">
+      <app-multiple-select
+          [control]= "form.controls.region"
+          [source$]="region$" 
+          [label]="'region:'">
+      </app-multiple-select>
+
+    <app-multiple-select
+        [control]= "form.controls.country"
+        [fieldName]= "'name'"
+        [source$]="locationResult$" 
+        [label]="'country:'">
+    </app-multiple-select>
+
+  <div *ngIf="country" class="region-item">
+    <app-country-details [countryDetail]="country"></app-country-details>
+  </div>
+</div>

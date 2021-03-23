@@ -1,0 +1,11 @@
+
+<div class="field-row">
+    <label for="region-select">{{label}}</label>
+    <select id="region-select"
+        [formControl]="control">
+        <option *ngFor="let item of source$ | async"
+            [ngValue]="item"> {{ item[ fieldName ] ?  item[ fieldName ]  : item }}
+        </option>
+    </select>
+</div>
+
